@@ -1,4 +1,4 @@
-     function toggleResetBtn(){
+function toggleResetBtn(){
       const resetBtn = document.querySelector('.reset')
       resetBtn.classList.toggle('active')
 }
@@ -19,3 +19,6 @@ function resetBanner(){
       banner.className = 'banner';
       toggleResetBtn();
 }
+
+
+
