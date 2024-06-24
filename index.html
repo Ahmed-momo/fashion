@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="bio.css">
+</head>
+<body>
+    
+
+    <header id="header">
+        <a href="/" class="logo">Shop</a>
+        <ul class="nav">
+            
+            <li> <a href="#"><ion-icon name="home-outline">Home</ion-icon></a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">shopping</a></li>
+            <li><a href="#">conect us</a></li>
+        </ul>
+        <ul class="util">
+            <li>
+                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="bag-outline"></ion-icon></a>
+                <span class="number">8</span>
+            </li> 
+        </ul>
+    </header>
+    
+    <div id="banner" class="banner">
+        <div class="woman">
+            <img src="https://images4.alphacoders.com/126/1263047.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('left');">Women</a>
+            <div class="content">
+                <h1>favorite fashion girls</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsam.</p>
+                <a href="#">Shop Around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <div class="men">
+            <img src="men-1.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('middle');">Men</a>
+            <div class="content">
+                <h1>“A well-tied tie is the first serious step in life</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsam.</p>
+                <a href="#">Shop Around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <div class="special">
+            <img src="https://img5.goodfon.com/wallpaper/nbig/6/b8/pevitsa-krasnyi-fon-singer-dua-lipa-dua-lipa-krasnoe-plate-u.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('right');">Special</a>
+            <div class="content">
+                <h1>Long skirts are out of fashion now.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsam.</p>
+                <a href="#">Shop Around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+            
+        </div>
+        <a href="#" class="reset" onclick="resetBanner()"><ion-icon name="power-outline"></ion-icon></a>
+    </div>
+    
+    
+    <main>
+        <section class="call-up">
+            <div class="call-up-box">
+                <ion-icon name="send-outline"></ion-icon>
+                <div>
+                    <h4>Free Shipping</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolor?</p>
+                </div>
+            </div>
+            <div class="call-up-box">
+                <ion-icon name="card-outline"></ion-icon>
+                <div>
+                    <h4>Security Payment</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolor?</p>
+                </div>
+            </div>
+            <div class="call-up-box">
+                <ion-icon name="wallet-outline"></ion-icon>
+                <div>
+                    <h4>15 Days Return</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolor?</p>
+                </div>
+            </div>
+        </section>
+    
+    <section id="about" class="about">
+        <div class="left">
+            <div class="promotion about-box">
+                <img src="https://t4.ftcdn.net/jpg/04/84/87/61/360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg" alt="">
+                <div class="description">
+                    <h4>Promotion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, tempore.
+                    </p>
+                    <a href="#">Shop Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+            <div class="style about-box">
+                <img src="https://img.freepik.com/premium-photo/cold-weather-forecast-happy-child-wear-hat-favorite-sweater-copy-space-teen-girl-yellow-background-little-girl-knitwear-kid-beauty-fashion-get-warm-winter-season_474717-12661.jpg" alt="">
+                <div class="description">
+                    <h4>Sale Fashion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, tempore.
+                    </p>
+                    <a href="#">Shop Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="collection about-box">
+                <img src="https://wallpapercave.com/wp/wp7030283.jpg" alt="">
+                <div class="description">
+                    <h4>Collection</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, tempore.
+                    </p>
+                    <a href="#">Shop Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+            <div class="discovery about-box">
+                <img src="sneaker-4.jpg" alt="">
+                <div class="description">
+                    <h4>Trendung Style</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, tempore.
+                    </p>
+                    <a href="#">Shop Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer-title">copyright @ <span>AHMED MOHMED</span></p>
+        <div class="icon">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+    
+    </footer>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script src="koko.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

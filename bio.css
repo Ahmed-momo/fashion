@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #ff0051;
+    --second: #3a3a3a;
+    --third: #f2f2f2;
+}
+
+body {
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    background: transparent;
+    transition: 0.5s;
+    z-index: 1100;
+}
+
+.logo {
+    position: relative;
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.nav li a:hover {
+    color: var(--primary);
+}
+
+.util {
+    display: flex;
+    align-items: center;
+}
+
+.util li {
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.util li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.util li a ion-icon {
+    font-size: 1.6em;
+}
+
+.util li a:hover {
+    color: var(--primary);
+}
+
+.util li .number {
+    position: absolute;
+    right: 111px;
+    bottom: 43px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+    font-weight: 400;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.woman::before,
+.men::before,
+.special::before,
+.middle::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.woman:hover::before,
+.men:hover::before,
+.special:hover::before,
+.middle:hover::before {
+    background: transparent;
+}
+
+.woman {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background: var(--primary);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.men {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 40%;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 25% 50%, 0 0);
+    background: var(--second);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 40%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background: var(--second);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.special {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    height: 100%;
+    width: 40%;
+    clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background: var(--primary);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner.left .woman,
+#banner.middle .men,
+#banner.right .special {
+    width: 100%;
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+    transition: 1s;
+}
+
+#banner.right .special {
+    left: 0;
+}
+
+#banner.middle .men {
+    left: 0;
+}
+
+#banner.left .men,
+#banner.left .special {
+    left: 120%;
+}
+
+#banner.right .men,
+#banner.right .woman {
+    left: -120%;
+}
+
+#banner.middle .woman {
+    left: -120%;
+}
+
+#banner.middle .special {
+    left: 120%;
+    
+}
+
+.woman img,
+.men img,
+.special img,
+.middle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+#banner.left .woman img {
+    width: 50%;
+}
+
+#banner.middle .men img,
+#banner.right .special img,
+#banner.middle .middle img {
+    left: 50%;
+    width: 50%;
+}
+
+.switch-btn {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 300;
+    margin-top: 40%;
+    z-index: 1000;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.switch-btn:hover {
+    transform: scale(1.2);
+}
+
+.reset {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.reset.active {
+    transform: rotateZ(180deg);
+}
+
+.reset ion-icon {
+    color: #8d3232;
+    font-size: 3em;
+    transition: 0.3s;
+}
+
+.reset ion-icon:hover {
+    color: var(--primary);
+}
+#banner .content{
+    position: absolute;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 900;
+}
+
+#banner .content h1{
+    color: #ffffff;
+    font-size: 4.5em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#banner .content p{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 1em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+} 
+
+#banner .content a{
+    position: relative;
+    width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 400;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+#banner .content a ion-icon{
+    font-size: 1.2em;
+}
+
+#banner .content  a:hover{
+    background: #ffffff;
+    color: var(--primary);
+}
+
+
+#banner.left .woman .content,
+#banner.middle .men .content,
+#banner.right .special .content{
+    opacity: 1;
+    visibility: visible;
+    
+
+}
+
+
+.woman .content{
+    left: 55%;
+}
+
+
+.men .content,
+.special .content{
+    left: 100px;
+}
+
+
+
+
+
+
+main{
+    width: 100%;
+    padding: 100px 0;
+    background: #f5c1c1ab;
+}
+
+section.call-up{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+.call-up-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 40px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+}
+
+.call-up-box ion-icon{
+    font-size: 5em;
+    color: var(--primary);
+}
+.call-up-box h4{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.call-up-box p{
+    font-weight: 300;
+}
+
+
+
+
+
+.about{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.about .left,
+.about .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.promotion,
+.discovery{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding: 50px;
+}
+
+
+.style,
+.collection{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding: 50px;
+    
+}
+
+
+.about-box{
+    overflow: hidden;
+}
+
+.about-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+.about-box:hover img{
+    transform: scale(1.1);
+}
+
+.about-box::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.about-box:hover::after{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.about .description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 900;
+}
+
+.about .description h4{
+    position: relative;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+
+
+.about .description h4::after{
+    position: absolute;
+    content: '';
+    background: var(--primary);
+    bottom: -10px;
+    left: 0;
+    width: 70%;
+    height: 3px;
+}
+
+.about .description p{
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.about a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.about a:hover{
+    gap: 10px;
+    color: #ff0051;
+}
+
+
+.footer{
+    background: #522e2eab;
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    color: white;
+
+}
+.footer-title span{
+    color: rgb(171, 171, 195);
+    
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span:hover{
+    color: var(--third);
+}
+
+
+
+
+/**
+**ahmed mohmed
+*!mohmed and some people
+*?mohmed 
+* todo
+*  ahmed
+*/
+
+/**
+*!ahmed 
+*todo
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
